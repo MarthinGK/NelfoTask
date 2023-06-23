@@ -1,0 +1,53 @@
+// This is the pseudocode that I wrote 
+// before I started on the task itself.
+// I figured I could add it so you can get a better
+// understanding of my inital thought process.
+
+
+- get and read file.
+- split at newlines -> loop lines -> split at ;
+- save vh in hashmap 1
+- save vl/vx in hashmap 2
+- save hashmap 1 and 2 in hashmap 3
+
+ if(Cell #1 == VH){
+    if(Cell #2 == EFONELFO){
+      if(Cell #3 == 4.0){ 
+         extract as header:
+         Cell #4  - Seller's organization number
+	 Cell #11 - Seller's organization name  
+     } else { invalid header }
+   } else { invalid header }
+ } 
+
+next: 
+
+ if(Cell #1 == VL) {
+     if(Cell #2 == 1) {
+        extract: 
+        Cell #3  - Product number
+	Cell #4  - Product description
+	Cell #7  - Product price unit
+	Cell #9  - Product price
+	Cell #10 - Product quantity
+	Cell #17 - Stock product (J/N or empty)
+     }
+     else{ SKIP CELL }
+ }
+
+
+next:
+
+ if(Cell #1 == VX) {
+   if(Cell #2 == VEKT) {
+      extract: 
+      Cell #3 - Product weight
+   }
+   
+ }
+
+
+ if(Cell #1 != VH && Cell #1 != VL && Cell #1 != VX) 
+   { SKIP CELL }
+
+
